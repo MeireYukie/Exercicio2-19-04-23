@@ -1,0 +1,26 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<!--Botão fecha todas as imagens-->
+    <lightning:button variant="success" label="Fecha tudo" title="Success" onclick="{! c.fechaTudo }"/>
+    
+    <!--Imagem Gato Mago-->
+    <aura:attribute name="apareceGatoMago" type="boolean" default="true" description="true or false"></aura:attribute>
+    <aura:if isTrue="{!v.apareceGatoMago}"> 
+        <img src="{!$Resource.gatoMago}"/>         
+    </aura:if>
+    <lightning:button class="corBotao" variant="brand" label="Gato Mago" title="gatoMago" onclick="{! c.gatoMagoSome }" />
+    
+    <!--Imagem Dois Gatos-->
+    <aura:attribute name="apareceDoisGatos" type="boolean" default="true" description="true or false"></aura:attribute>
+    <aura:if isTrue="{!v.apareceDoisGatos}">
+        <img src="{!$Resource.doisGatos}"/>
+    </aura:if>
+    <lightning:button variant="brand" label="Dois Gatos" title="gatos" onclick="{! c.doisGatosSome }" />
+    
+    <!--Imagem Serena-->
+    <aura:attribute name="apareceSerena" type="boolean" default="true" description="true or false"></aura:attribute>
+    <aura:if isTrue="{!v.apareceSerena}"> 
+        <img src="{!$Resource.serena}"/>         
+    </aura:if>
+	<lightning:button variant="brand" label="Serena" title="gato" onclick="{! c.serenaSome }" />
+               
+</aura:component>
