@@ -1,0 +1,48 @@
+({
+	gatoMagoSome : function(component) {
+        var apareceGatoMago = component.get("v.apareceGatoMago"); //Primeira imagem
+        
+        if(apareceGatoMago == true) {
+            component.set("v.apareceGatoMago", false); //Fecha a imagem
+        } else {
+            component.set("v.apareceGatoMago", true); //Imagem visível
+        }
+	},
+    
+    doisGatosSome : function(component) {
+        var apareceDoisGatos = component.get("v.apareceDoisGatos"); //Segunda imagem
+        
+        if(apareceDoisGatos == true) {
+            component.set("v.apareceDoisGatos", false);
+        } else {
+            component.set("v.apareceDoisGatos", true);
+        }
+	},
+    
+    serenaSome : function(component) {
+        var apareceSerena = component.get("v.apareceSerena"); //TErceira imagem
+        
+        if(apareceSerena == true) {
+            component.set("v.apareceSerena", false);
+        } else {
+            component.set("v.apareceSerena", true);
+        }
+	},
+    
+    fechaTudo : function(component) {
+        var apareceGatoMago = component.get("v.apareceGatoMago");
+        var apareceDoisGatos = component.get("v.apareceDoisGatos");
+        var apareceSerena = component.get("v.apareceSerena");
+        
+        if(apareceGatoMago == true || apareceDoisGatos == true || apareceSerena == true) {
+            component.set("v.apareceGatoMago", false);
+            component.set("v.apareceDoisGatos", false);
+            component.set("v.apareceSerena", false);
+        } else {
+            component.set("v.apareceGatoMago", true);
+            component.set("v.apareceDoisGatos", true);
+            component.set("v.apareceSerena", true);
+        }
+    }
+    
+})
