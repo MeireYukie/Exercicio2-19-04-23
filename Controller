@@ -1,0 +1,17 @@
+({
+	gatoMagoSome : function(component, event, helper) {
+        helper.gatoMagoSome(component);
+		
+	},
+    doisGatosSome : function(component, event, helper) {
+        helper.doisGatosSome(component);
+        
+    },
+    serenaSome : function(component, event, helper) {
+        helper.serenaSome(component);
+        
+    },
+    fechaTudo : function(component, event, helper) {
+        helper.fechaTudo(component);
+    }
+})
